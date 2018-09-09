@@ -16,11 +16,15 @@ namespace Clavier
             do
             {
                 cki = Console.ReadKey(true);
-                if (!Keys.Mappings.ContainsKey(cki.Key)) continue;
-                var key = Keys.Mappings[cki.Key];
-                Console.ForegroundColor = key.Color;
+
+                if (Keys.Mappings.ContainsKey(cki.Key))
+                {
+                    var key = Keys.Mappings[cki.Key];
+                    Console.ForegroundColor = key.Color;
+                    track.Play(key.Hz);
+                }
                 Console.Write(cki.KeyChar.ToString().ToUpper());
-                track.Play(key.Hz);
+
             } while (cki.Key != ConsoleKey.Escape);
         }
 
