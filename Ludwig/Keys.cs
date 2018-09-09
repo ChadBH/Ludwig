@@ -7,20 +7,28 @@ namespace Ludwig
     {
         public static Dictionary<ConsoleKey, Key> Mappings = new Dictionary<ConsoleKey, Key>
         {
-            {ConsoleKey.A, new Key(440, ConsoleColor.Red)},
-            {ConsoleKey.B, new Key(987.7666M, ConsoleColor.DarkYellow)},
-            {ConsoleKey.C, new Key(523.2511M, ConsoleColor.Gray)},
-            {ConsoleKey.D, new Key(587.3295M, ConsoleColor.Blue)},
-            {ConsoleKey.E, new Key(659.2551M, ConsoleColor.White)},
-            {ConsoleKey.F, new Key(698.4565M, ConsoleColor.Magenta)},
-            {ConsoleKey.G, new Key(698.9909M, ConsoleColor.Green)},
-            {ConsoleKey.H, new Key(440, ConsoleColor.Red)},
-            {ConsoleKey.I, new Key(493.883M, ConsoleColor.DarkYellow)},
-            {ConsoleKey.J, new Key(277.1826M, ConsoleColor.Gray)},
-            {ConsoleKey.K, new Key(293.6648M, ConsoleColor.Blue)},
-            {ConsoleKey.L, new Key(329.6276M, ConsoleColor.White)},
-            {ConsoleKey.M, new Key(349.2282M, ConsoleColor.Magenta)},
-            {ConsoleKey.N, new Key(391.9954M, ConsoleColor.Green)},
+            {ConsoleKey.Spacebar, new Key(20, ConsoleColor.Black)},
+            {ConsoleKey.A, new Key(220, ConsoleColor.Red)},
+            {ConsoleKey.B, new Key(246.94M, ConsoleColor.Yellow)},
+            {ConsoleKey.C, new Key(261.63M, ConsoleColor.Gray)},
+            {ConsoleKey.D, new Key(293.66M, ConsoleColor.Blue)},
+            {ConsoleKey.E, new Key(329.63M, ConsoleColor.White)},
+            {ConsoleKey.F, new Key(349.23M, ConsoleColor.Cyan)},
+            {ConsoleKey.G, new Key(392, ConsoleColor.Green)},
+            {ConsoleKey.H, new Key(440, ConsoleColor.Red)}, //A
+            {ConsoleKey.I, new Key(493.88M, ConsoleColor.Yellow)},//B
+            {ConsoleKey.J, new Key(523.25M, ConsoleColor.Gray)},//C
+            {ConsoleKey.K, new Key(587.33M, ConsoleColor.Blue)},//D
+            {ConsoleKey.L, new Key(659.26M, ConsoleColor.White)},//E
+            {ConsoleKey.M, new Key(698.46M, ConsoleColor.Cyan)},//F
+            {ConsoleKey.N, new Key(783.99M, ConsoleColor.Green)},//G
+            {ConsoleKey.O, new Key(880, ConsoleColor.Red)},//A
+            {ConsoleKey.P, new Key(987.77M, ConsoleColor.Yellow)},//B
+            {ConsoleKey.Q, new Key(1046.5M, ConsoleColor.Gray)},//C
+            {ConsoleKey.R, new Key(1174.66M, ConsoleColor.Blue)},//D
+            {ConsoleKey.S, new Key(1318.51M, ConsoleColor.White)},//E
+            {ConsoleKey.T, new Key(1396.91M, ConsoleColor.Cyan)},//F
+            {ConsoleKey.U, new Key(1567.98M, ConsoleColor.Green)},//G
     };
     }
 
