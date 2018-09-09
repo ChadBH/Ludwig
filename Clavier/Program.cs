@@ -1,4 +1,5 @@
 ﻿using System;
+using Ludwig;
 
 namespace Clavier
 {
@@ -6,17 +7,43 @@ namespace Clavier
     {
         static void Main(string[] args)
         {
+            var song = Songs.Choices[0];
+            Console.WriteLine(song.Item1);
+            PrettyPrint(song.Item2);
+
             ConsoleKeyInfo cki;
-            var track = new Ludwig.Track();
+            var track = new Track();
             do
             {
                 cki = Console.ReadKey(true);
-                if (!Ludwig.Keys.Mappings.ContainsKey(cki.Key)) continue;
-                var key = Ludwig.Keys.Mappings[cki.Key];
+                if (!Keys.Mappings.ContainsKey(cki.Key)) continue;
+                var key = Keys.Mappings[cki.Key];
                 Console.ForegroundColor = key.Color;
-                Console.Write(cki.KeyChar);
+                Console.Write(cki.KeyChar.ToString().ToUpper());
                 track.Play(key.Hz);
             } while (cki.Key != ConsoleKey.Escape);
         }
+
+        private static void PrettyPrint(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return;
+
+            foreach (var c in input)
+            {
+                var asString = c.ToString();
+
+                if (Enum.TryParse(asString, out ConsoleKey consoleKey))
+                {
+                    if (Keys.Mappings.ContainsKey(consoleKey))
+                    {
+                        var key = Keys.Mappings[consoleKey];
+                        Console.ForegroundColor = key.Color;
+                    }
+                }
+                Console.Write(asString);
+            }
+            Console.Write("\r\n");
+        }
     }
+
 }
